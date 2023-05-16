@@ -1,0 +1,18 @@
+syntax = "proto3";
+package xion.v1;
+
+import "google/api/annotations.proto";
+
+option go_package = "github.com/burnt-labs/xion/x/xion/types";
+
+service Query {
+  rpc PlatformPercentage(QueryPlatformPercentageRequest) returns (QueryPlatformPercentageResponse) {
+    option (google.api.http).get = "/burnt-labs/xion/v1/percentage";
+  }
+}
+
+message QueryPlatformPercentageRequest {}
+
+message QueryPlatformPercentageResponse {
+  uint32 PlatformPercentage = 1;
+}

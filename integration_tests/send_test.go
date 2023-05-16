@@ -73,20 +73,11 @@ func TestXionSendPlatformFee(t *testing.T) {
 
 	// Relayer Factory
 	client, network := ibctest.DockerSetup(t)
-	//relayer := ibctest.NewBuiltinRelayerFactory(ibc.CosmosRly, zaptest.NewLogger(t)).Build(
-	//	t, client, network)
 
 	// Prep Interchain
 	const ibcPath = "xion-osmo-dungeon-test"
 	ic := ibctest.NewInterchain().
 		AddChain(xion)
-	//AddRelayer(relayer, "relayer").
-	//AddLink(ibctest.InterchainLink{
-	//	Chain1:  xion,
-	//	Chain2:  osmosis,
-	//	Relayer: relayer,
-	//	Path:    ibcPath,
-	//})
 
 	// Log location
 	f, err := ibctest.CreateLogFile(fmt.Sprintf("%d.json", time.Now().Unix()))
@@ -101,8 +92,7 @@ func TestXionSendPlatformFee(t *testing.T) {
 		Client:            client,
 		NetworkID:         network,
 		BlockDatabaseFile: ibctest.DefaultBlockDatabaseFilepath(),
-
-		SkipPathCreation: false},
+		SkipPathCreation:  false},
 	),
 	)
 
@@ -149,6 +139,8 @@ func TestXionSendPlatformFee(t *testing.T) {
 	xion.Config().EncodingConfig.InterfaceRegistry.RegisterImplementations(
 		(*types.Msg)(nil),
 		&xiontypes.MsgSetPlatformPercentage{},
+		&xiontypes.MsgSend{},
+		&xiontypes.MsgMultiSend{},
 	)
 	cdc := codec.NewProtoCodec(xion.Config().EncodingConfig.InterfaceRegistry)
 
