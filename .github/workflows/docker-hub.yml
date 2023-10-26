@@ -50,7 +50,7 @@ jobs:
           target: xion-release
 
   build-dev:
-    name: Build Image
+    name: Build Dev Image
     runs-on: ubuntu-latest
     environment: CI
 
@@ -77,7 +77,7 @@ jobs:
           images: burntnetwork/xion
           tags: |
             type=semver,priority=1000,pattern=dev-{{version}}
-            type=sha,priority=700,prefix=dev-
+            type=sha,priority=700,suffix=-dev
             type=raw,priority=500,value=dev
 
       - name: Build and push local dev docker image
