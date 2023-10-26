@@ -4,7 +4,7 @@ name: Build and Push to Docker Hub
 on:
   push:
     branches:
-      - main
+      - figure-out-docker-workflow
   workflow_dispatch:
 
 jobs:
@@ -49,22 +49,22 @@ jobs:
           cache-to: type=gha,mode=max
           target: xion-release
 
-      - name: Build and push local dev docker image
-        uses: docker/build-push-action@v5
+      - name: Extract metadata for docker
+        id: meta
+        uses: docker/metadata-action@v5
         with:
-          context: .
-          push: true
-          tags: dev
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-          target: xion-dev
+          images: burntnetwork/xion
+          tags: |
+            type=semver,priority=1000,pattern=dev-{{version}}
+            type=sha,priority=700,prefix=dev-
+            type=raw,priority=500,value=dev
 
       - name: Build and push local dev docker image
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}-dev
+          tags: ${{ steps.meta.outputs.tags }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
           target: xion-dev
