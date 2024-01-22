@@ -191,6 +191,8 @@ require (
 
 replace (
 	github.com/99designs/keyring => github.com/cosmos/keyring v1.2.0
+
+	github.com/cosmos/ibc-apps/middleware/packet-forward-middleware/v7 => github.com/cosmos/ibc-apps/middleware/packet-forward-middleware/v7 v7.0.0-20230803181732-7c8f814d3b79
 	// Fix upstream GHSA-h395-qcrw-5vmq vulnerability.
 	// See: https://github.com/cosmos/cosmos-sdk/issues/10409
 	github.com/gin-gonic/gin => github.com/gin-gonic/gin v1.8.1
