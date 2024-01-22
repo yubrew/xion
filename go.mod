@@ -9,7 +9,7 @@ require (
 	github.com/cosmos/gogogateway v1.2.0 // indirect
 	github.com/cosmos/gogoproto v1.4.10
 	github.com/cosmos/iavl v0.20.1 // indirect
-	github.com/cosmos/ibc-go/v7 v7.3.0
+	github.com/cosmos/ibc-go/v7 v7.3.1
 	github.com/cosmos/ics23/go v0.10.0 // indirect
 	github.com/docker/distribution v2.8.2+incompatible // indirect
 	github.com/dvsekhvalnov/jose2go v1.5.0 // indirect
@@ -42,11 +42,11 @@ require (
 	github.com/armon/go-metrics v0.4.1
 	github.com/cometbft/cometbft v0.37.4
 	github.com/cometbft/cometbft-db v0.8.0
-	github.com/cosmos/ibc-apps/middleware/packet-forward-middleware/v7 v7.1.2
+	github.com/cosmos/ibc-apps/middleware/packet-forward-middleware/v7 v7.0.0
 	github.com/cosmos/ibc-apps/modules/ibc-hooks/v7 v7.0.0-20230802211043-d72e83c94350
 	github.com/golang/mock v1.6.0
 	github.com/larry0x/abstract-account v0.0.0-20230708200055-2ea462db913f
-	github.com/osmosis-labs/fee-abstraction/v4 v4.0.0-20230812032455-33dfc391894d
+	github.com/osmosis-labs/fee-abstraction/v7 v7.0.0-20240119031216-bb4b8375aa3b
 	github.com/spf13/viper v1.16.0
 	google.golang.org/genproto/googleapis/api v0.0.0-20231002182017-d307bd883b97
 	gotest.tools/v3 v3.5.0
