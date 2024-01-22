@@ -1,6 +1,6 @@
 module github.com/burnt-labs/xion
 
-go 1.19
+go 1.20
 
 require (
 	github.com/CosmWasm/wasmvm v1.5.0 // indirect
