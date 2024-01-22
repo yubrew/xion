@@ -178,7 +178,7 @@ require (
 	github.com/multiformats/go-varint v0.0.6 // indirect
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/opencontainers/image-spec v1.1.0-rc2 // indirect
-	github.com/osmosis-labs/fee-abstraction/v4 v4.0.0-20230812032455-33dfc391894d // indirect
+	github.com/osmosis-labs/fee-abstraction/v7 v7.0.0-20240119031216-bb4b8375aa3b // indirect
 	github.com/pelletier/go-toml v1.9.5 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.9 // indirect
 	github.com/petermattis/goid v0.0.0-20230317030725-371a4b8eda08 // indirect
@@ -259,6 +259,7 @@ replace (
 	github.com/ChainSafe/go-schnorrkel/1 => github.com/ChainSafe/go-schnorrkel v1.0.0
 	github.com/burnt-labs/xion => ../
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
+	github.com/osmosis-labs/fee-abstraction/v7 => github.com/burnt-labs/fee-abstraction/v7 v7.0.0-20240122012625-5a44bb239b5d
 	github.com/strangelove-ventures/interchaintest/v7 => github.com/burnt-labs/interchaintest/v7 v7.0.0-20230725204927-990da9d6e272
 	github.com/vedhavyas/go-subkey => github.com/strangelove-ventures/go-subkey v1.0.7
 )
