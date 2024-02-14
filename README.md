@@ -24,3 +24,5 @@ The final line of output should read as follows if successful:
 ```bash
 ok      integration_tests       164.191s
 ```
+
+Xion is a project written by burnt-labs.
